@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+venv/
+env/
+.env
+*.egg-info/
+
+# ML model files (generated at runtime)
+backend/models/*.pkl
+backend/models/mit_indoor/
+backend/models/*.tar
+
+# YOLOv8 weights (auto-downloaded)
+backend/yolov8n.pt
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# macOS
+.DS_Store
+*.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
