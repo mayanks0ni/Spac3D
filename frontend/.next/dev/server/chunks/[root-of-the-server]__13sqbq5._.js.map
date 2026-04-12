@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///Users/akmishra/Desktop/PRML/PRML_Project_Related/frontend/src/app/api/nlp-place/route.ts"],"sourcesContent":["import { NextResponse } from 'next/server';\n\nexport async function POST(request: Request) {\n  try {\n    const data = await request.json();\n    return NextResponse.json({ status: 'ok', message: `Object place submitted: ${data.prompt}` });\n  } catch (error) {\n    return NextResponse.json({ status: 'error', message: 'Internal Server Error' }, { status: 500 });\n  }\n}\n"],"names":["POST","request","data","json","status","message","prompt","error"],"mappings":";;;;AAAA;;AAEO,eAAeA,KAAKC,OAAgB;IACzC,IAAI;QACF,MAAMC,OAAO,MAAMD,QAAQE,IAAI;QAC/B,OAAO,gJAAY,CAACA,IAAI,CAAC;YAAEC,QAAQ;YAAMC,SAAS,CAAC,wBAAwB,EAAEH,KAAKI,MAAM,EAAE;QAAC;IAC7F,EAAE,OAAOC,OAAO;QACd,OAAO,gJAAY,CAACJ,IAAI,CAAC;YAAEC,QAAQ;YAASC,SAAS;QAAwB,GAAG;YAAED,QAAQ;QAAI;IAChG;AACF"}}]
+}

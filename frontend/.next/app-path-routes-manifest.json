@@ -1,0 +1,9 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/mock-process/route": "/api/mock-process",
+  "/api/nlp-place/route": "/api/nlp-place",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/scene/page": "/scene"
+}
