@@ -81,11 +81,35 @@ spac3d/
 
 ---
 
-## 5. Deployment Schema and Initialization Procedures
+## 5. Package Requirements
 
-To guarantee deterministic behavior across varied compute environments, containerized execution via Docker is strictly prioritized. 
+### Backend (Python)
+Dependencies listed in `backend/requirements.txt`:
+*   `fastapi`
+*   `uvicorn[standard]`
+*   `python-multipart`
+*   `ultralytics`
+*   `torch`
+*   `torchvision`
+*   `scikit-learn`
+*   `numpy`
+*   `Pillow`
+*   `scipy`
 
-### 5.1. Containerized Initialization (Recommended Protocol)
+### Frontend (Node.js)
+Core dependencies from `frontend/package.json`:
+*   `react` (^19.2.4)
+*   `react-dom` (^19.2.4)
+*   `vite` (^8.0.4)
+*   `typescript` (~6.0.2)
+
+---
+
+## 6. Run Instructions
+
+To guarantee deterministic behavior across varied compute environments, containerized execution via Docker is prioritized. 
+
+### 6.1. Docker Initialization (Recommended)
 Execution of the orchestrated container network will inherently resolve dependencies, initialize required communication ports, and mount corresponding volumes.
 ```bash
 docker-compose up --build
@@ -93,7 +117,7 @@ docker-compose up --build
 *   **Frontend Presentation Port**: Accessible locally via `http://localhost:3000`
 *   **Backend Interface (FastAPI Swagger Docs)**: Accessible locally via `http://localhost:8000/docs`
 
-### 5.2. Granular Manual Environment Configuration
+### 6.2. Manual Local Setup
 For deep analytical debugging or progressive development, the subsystems may be initialized locally.
 
 #### Core Backend Initialization
@@ -114,7 +138,7 @@ npm run dev
 
 ---
 
-## 6. System Considerations and Technical Constraints
+## 7. System Considerations and Technical Constraints
 
 *   **Initial Weight Acquisition Mechanism**: Upon executing the initial inference sequence, the system relies on dynamic fetching routines to download non-distributed model artifacts, most notably `yolov8s-world.pt` (circa 45MB payload size).
 *   **Hardware Execution Paradigms**: The inference pipeline relies on localized multi-processing and executes robustly on conventional Central Processing Units (CPUs) via optimized parallelization. The architecture inherently supports offloading matrices to Tensor Cores or CUDA pipelines where deterministic GPU hardware is actively exposed to the Python runtime limits.
@@ -122,6 +146,6 @@ npm run dev
 
 ---
 
-## 7. Proprietary Licensing and Distribution
+## 8. Proprietary Licensing and Distribution
 
 *Proprietary Integration Framework — Developed exclusively for the technical advancement of SPAC3D Interior Intelligence Architectures. Restricted dissemination mapping applies to core logic controllers.*
